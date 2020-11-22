@@ -1,18 +1,20 @@
-import React, { Link } from 'react'
-import styled from 'styled.compoents'
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-const mainPageNavbar = styled.nav
-    `display: flex;
-    flex-flow: row-nowrap;
+const StyledNavbar = styled.nav`
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: space-evenly;
-    align-items: center`
+    align-items: center;
+    
+    background: blue;
+    color: white;`;
 
-
-const NavBar = () => {
-
+function NavBar() {
     return (
-        <mainPageNavbar>
-            <div className="nav -Links">
+        <StyledNavbar>
+            <div className="nav-links">
                 <ul>
                     <li>
                         <Link to="/" className="link">Home</Link>
@@ -29,7 +31,7 @@ const NavBar = () => {
                     </li>
                 </ul>
             </div>
-        </mainPageNavbar>
+        </StyledNavbar>
     )
 }
 export default NavBar

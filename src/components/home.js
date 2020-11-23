@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
-// import NavBar from "./navbar"
+import NavBar from "./navbar"
 import Photo from "./photo"
+import { BrowserRouter as Router } from 'react-router-dom'
+
 
 function HomePage() {
 
@@ -29,10 +31,10 @@ function HomePage() {
     }, [])
 
     return (
-        <div>
-            {/* <NavBar /> */}
+        <Router>
+            <NavBar />
             <Photo data={data} />
-        </div>
+        </Router>
     )
 }
 export default HomePage

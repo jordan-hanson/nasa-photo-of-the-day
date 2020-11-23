@@ -14,22 +14,20 @@ const StyledNavbar = styled.nav`
 function NavBar() {
     return (
         <StyledNavbar>
-            <div className="nav-links">
-                <ul>
-                    <li>
-                        <Link to="/" className="link">Home</Link>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <Link to="/about" className="link">About</Link>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <Link to="/contact" className="link">Contact</Link>
-                    </li>
-                </ul>
+            <div className="navbar">
+                <div className="container">
+                    <ul>
+                        <li>
+                            <Link to="/" className="link">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/about" className="link">About</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact" className="link">Contact</Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </StyledNavbar>
     )

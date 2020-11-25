@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react"
 import NavBar from "./navbar"
 import Photo from "./photo"
+import Article from './article'
 import { BrowserRouter as Router } from 'react-router-dom'
-
+import { Container, Row, Col } from 'react-bootstrap'
+import "../style/home.css"
 
 function HomePage() {
 
     const [data, setData] = useState([])
-
-    // const [urlPhoto, setUrlPhoto] = useState("")
-    // const [date, setDate] = useState("")
-
 
     useEffect(() => {
         async function getUrlPhoto() {
@@ -32,8 +30,26 @@ function HomePage() {
 
     return (
         <Router>
-            <NavBar />
-            <Photo data={data} />
+            <div className="nav">
+                <NavBar />
+            </div>
+
+            <Container>
+                <Row className="row">
+                    <Col>
+                        <Photo data={data} />
+                    </Col>
+                    <Col>
+                        <Article data={data} />
+                    </Col>
+                    <Col>
+                        <div>
+                            hello
+                    </div>
+                    </Col>
+                </Row>
+            </Container>
+
         </Router>
     )
 }

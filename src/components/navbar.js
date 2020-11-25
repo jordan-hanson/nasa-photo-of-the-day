@@ -8,15 +8,25 @@ const StyledNavbar = styled.nav`
     justify-content: space-evenly;
     align-items: center;
     
-    background: blue;
-    color: white;`;
+    background: white;
+    color: white;
+    width: 50%;
+    float: left;
+    font-weight: bold;`;
+
+// const StyledLink = styled.link`
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-evenly;
+//     align-items: right;
+// `;
 
 function NavBar() {
     return (
         <StyledNavbar>
-            <div className="navbar">
+            <div className="nav">
                 <div className="container">
-                    <ul>
+                    <ul className="list">
                         <li>
                             <Link to="/" className="link">Home</Link>
                         </li>

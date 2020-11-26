@@ -1,10 +1,15 @@
 import React from "react"
+import styled from 'styled-components'
+
+const CustomPhoto = styled.img`
+    width: 100%;
+`;
 
 function Photo(props) {
 
     return (
         <div>
-            <img alt="NPOTD" src={props.data.url} />
+            <CustomPhoto alt="NPOTD" src={props.data.url} />
         </div>
     )
 }

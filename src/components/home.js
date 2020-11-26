@@ -5,6 +5,16 @@ import Article from './article'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import "../style/home.css"
+import styled from 'styled-components'
+
+
+const Layout = styled.col`
+    width: 100%;
+`;
+
+// const CustomArt = styled.article`
+//     width: 100%;
+// `;
 
 function HomePage() {
 
@@ -41,11 +51,6 @@ function HomePage() {
                     </Col>
                     <Col>
                         <Article data={data} />
-                    </Col>
-                    <Col>
-                        <div>
-                            hello
-                    </div>
                     </Col>
                 </Row>
             </Container>
